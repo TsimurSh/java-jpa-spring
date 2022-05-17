@@ -1,0 +1,18 @@
+build
+*/build
+.gradle
+.mvn
+out
+*/out
+.DS_Store
+target
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# H2 database
+*.mv.db
+*.trace.db
