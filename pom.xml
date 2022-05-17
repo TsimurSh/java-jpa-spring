@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>pl.tsimur</groupId>
-    <artifactId>jpa-test</artifactId>
+    <artifactId>jpa-spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jpa-test</name>
+    <name>jpa-spring</name>
     <description>Demo JPA</description>
 
     <properties>
