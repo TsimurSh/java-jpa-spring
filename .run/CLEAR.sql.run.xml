@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CLEAR.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+    <script-file value="$PROJECT_DIR$/src/test/resources/CLEAR.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="5757efed-dd79-4683-b298-50d95004b917" namespace="database/&quot;postgres&quot;/schema/&quot;public&quot;" />
+    <method v="2" />
+  </configuration>
+</component>
