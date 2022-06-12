@@ -31,9 +31,9 @@ class UserControllerUnitTest {
     private UserService service;
 
     @Test
-    @Disabled("DO ME🚁🚁🚁🚁🚁🚁🚁🚁🚁")
+    @Disabled("DO 🚁🚁🚁🚁🚁🚁🚁🚁🚁")
     void registrationTest() throws Exception {
-        // Подсказка (objectMapper):
+        //  (objectMapper):
         // String jsonRequest = objectMapper.writeValueAsString(loginDto);
         // { "key" : "value" }
 
@@ -49,7 +49,7 @@ class UserControllerUnitTest {
                         get("/user/666")
                 )
                 .andDo(print())
-                .andExpect(status().isNotFound());
+                .andExpect(status().isOk());
     }
 
     @Test

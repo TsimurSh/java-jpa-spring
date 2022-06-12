@@ -30,8 +30,8 @@ class UserControllerTest {
 
                 .andExpect(jsonPath("$[0]").isNotEmpty())
                 .andExpect(jsonPath("$[0].id").isNotEmpty())
-                .andExpect(jsonPath("$[0].name").value("Tsima"))
-                .andExpect(jsonPath("$[0].surname").value("Batman"))
+                .andExpect(jsonPath("$[0].name").value("Super"))
+                .andExpect(jsonPath("$[0].surname").value("Man"))
                 .andExpect(jsonPath("$[0].balance").doesNotExist())
                 .andExpect(jsonPath("$[0].email").doesNotExist())
                 .andExpect(jsonPath("$[0].password").doesNotExist())
