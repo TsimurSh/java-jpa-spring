@@ -8,13 +8,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import pl.tsimur.jpatest.model.Tariff;
-import pl.tsimur.jpatest.model.User;
 import pl.tsimur.jpatest.model.dto.UserMiniDto;
 import pl.tsimur.jpatest.service.UserService;
 
 import java.util.List;
 
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
@@ -27,7 +25,7 @@ class UserControllerUnitTest {
     public static final UserMiniDto USER = new UserMiniDto(-1, "Tsima", "Batman", 33);
     @Autowired
     private MockMvc mockMvc;
-    @MockBean // TODO: https://www.baeldung.com/spring-boot-testing
+    @MockBean
     private UserService service;
 
     @Test
@@ -40,21 +38,11 @@ class UserControllerUnitTest {
 
     }
 
-    @Test
-    void findByNameTest() throws Exception {
-        Mockito.when(service.findOrThrow(eq(666)))
-                .thenReturn(new User());
 
-        mockMvc.perform(
-                        get("/user/666")
-                )
-                .andDo(print())
-                .andExpect(status().isOk());
-    }
 
     @Test
     void getAllUsersTest() throws Exception {
-        Mockito.when(service.findAllMiniUsers()) // TODO: какие еще в Мокито есть кроме `when` & `doNothing` ?
+        Mockito.when(service.findAllMiniUsers()) // TODO: What are other  `when` & `doNothing` ?
                 .thenReturn(
                         List.of(USER)
                 );
@@ -79,9 +67,9 @@ class UserControllerUnitTest {
 
     @Test
     void buySubscriptionTest() throws Exception {
-        Mockito.doNothing()// TODO: https://www.baeldung.com/mockito-void-methods
+        Mockito.doNothing()
                 .when(service).buySubscription(
-                        isA(Integer.class), isA(Tariff.class) // TODO: что еще можно кроме `isA()` ?
+                        isA(Integer.class), isA(Tariff.class) // TODO: what beside `isA()` ?
                 );
 
         mockMvc.perform(put("/user/-3/INDIVIDUAL"))
