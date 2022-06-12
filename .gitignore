@@ -1,7 +1,6 @@
 build
 */build
 .gradle
-.mvn
 out
 */out
 .DS_Store
